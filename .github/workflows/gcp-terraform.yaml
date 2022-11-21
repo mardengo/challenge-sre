@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - release/infra-terraform
   pull_request:
 
 jobs:
