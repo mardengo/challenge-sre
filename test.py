@@ -1,7 +1,7 @@
 import requests
 import json
 
-url = 'http://0.0.0.0:5000/api/'
+url = 'https://acidlabs-api-3654syeneq-uc.a.run.app/api/'
 
 data = [[0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0]]
 j_data = json.dumps(data)
