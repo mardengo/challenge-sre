@@ -6,8 +6,11 @@ import json
 
 app = Flask(__name__)
 
+@app.route("/health", methods=['GET'])
+def health():
+    return ''
 
-@app.route('/api/', methods=['POST','GET'])
+@app.route('/api/', methods=['POST'])
 def makecalc():
     data = request.get_json()
     prediction = np.array2string(model.predict(data))
