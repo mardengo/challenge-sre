@@ -6,7 +6,7 @@ resource "google_project_service" "run_api" {
 }
 
 resource "google_cloud_run_service" "run_service" {
-  name = "acidlabs-api"
+  name     = "acidlabs-api"
   location = "us-central1"
 
   template {
@@ -36,9 +36,9 @@ data "google_iam_policy" "noauth" {
 }
 
 resource "google_cloud_run_service_iam_policy" "noauth" {
-  location    = google_cloud_run_service.run_service.location
-  project     = google_cloud_run_service.run_service.project
-  service     = google_cloud_run_service.run_service.name
+  location = google_cloud_run_service.run_service.location
+  project  = google_cloud_run_service.run_service.project
+  service  = google_cloud_run_service.run_service.name
 
   policy_data = data.google_iam_policy.noauth.policy_data
 }
